@@ -25,12 +25,12 @@
             <div id="wrongLetters"></div>
         </div>
         
-        <div class="word" id="word"><input type="text" autofocus></div>
+        <div class="word" id="word"></div>
     </div>
 
     <!-- Container for final messages -->
     <div class="popup-container" id="popupContainer">
-        <div class="popup">
+        <div class="popup showpopup" id="popup">
             <h2 id="finalMessage"></h2>
             <button id="playButton">Play again</button>
         </div>
@@ -40,6 +40,8 @@
     <div class="notification-container" id="notificationContainer">
         <p>You have already entered this letter</p>
     </div>
+
+    <input type="text" autofocus>
     <script src="script.js"></script>
 </body>
 </html>

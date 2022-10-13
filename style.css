@@ -108,7 +108,7 @@ body {
   justify-content: center;
   margin: 1.5rem 0.2rem 1rem 0.2rem;
   height: 50px;
-  width: 20px;
+  width: clamp(0.8rem, 2.3vw, 1.2rem);
 }
 
 .popup-contaienr {
@@ -118,12 +118,16 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .popup {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
   background-color: #b594b6;
   border-radius: 5px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
@@ -131,6 +135,12 @@ body {
     rgba(240, 46, 170, 0.05) 25px 25px;
   padding: 1.2rem;
   text-align: center;
+  max-width: 80vw;
+  transition: left 1s ease-in-out;
+}
+
+.show-popup {
+  left: 50%;
 }
 
 .popup button {

@@ -2,6 +2,7 @@ const wordE1 = document.querySelector("#word");
 const wrongLettersE1 = document.querySelector("#wrongLetters");
 const playAgainBtn = document.querySelector("#playButton");
 const popup = document.querySelector("#popupContainer");
+const popupNotContainer = document.querySelector("#popup");
 const notification = document.querySelector("#notificationContainer");
 const finalMessage = document.querySelector("#finalMessage");
 
@@ -15,7 +16,9 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 const correctLetters = [];
 const wrongLetters = [];
 
-window.addEventListener("load", () => (popup.style.display = "none"));
+window.addEventListener("load", () =>
+  popupNotContainer.classList.remove("show-popup")
+);
 
 /* show hidden word */
 
@@ -35,7 +38,7 @@ function displayWord() {
 
   if (innerWord === selectedWord) {
     finalMessage.innerText = "Hi, nice to meet you too!";
-    popup.style.display = "flex";
+    popupNotContainer.classList.add("show-popup");
   }
 }
 
@@ -60,7 +63,7 @@ function updateWrongLetterE1() {
   //Check if lost
   if (wrongLetters.length === figureParts.length) {
     finalMessage.innerText = "I hate you.";
-    popup.style.display = "flex";
+    popupNotContainer.classList.add("show-popup");
   }
 }
 
@@ -111,7 +114,7 @@ playAgainBtn.addEventListener("click", () => {
 
   updateWrongLetterE1();
 
-  popup.style.display = "none";
+  popupNotContainer.classList.remove("show-popup");
 });
 
 displayWord();
