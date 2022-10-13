@@ -18,9 +18,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   margin: 0;
   overflow: hidden;
+}
+
+.container {
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -36,6 +45,7 @@ body {
   padding: 1rem;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  margin-bottom: 5rem;
 }
 
 .game-container {
@@ -49,6 +59,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background-color: #a9fbc3;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
@@ -87,11 +98,6 @@ body {
   font-size: 24px;
 }
 
-/* input {
-  background-color: transparent;
-  border: none;
-} */
-
 .word {
   display: flex;
   position: absolute;
@@ -125,6 +131,7 @@ body {
 
 .fake-input {
   opacity: 0;
+  transform: translateX(-400%);
 }
 
 .popup {
