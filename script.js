@@ -9,7 +9,7 @@ const finalMessage = document.querySelector("#finalMessage");
 const figureParts = document.querySelectorAll(".figure-part");
 const figurePartsRemove = document.querySelectorAll(".remove-figure");
 
-const words = ["ullbert", "ingmar", "christian", "batman", "kaptenfilling"];
+const words = ["ullbert", "ingmar", "christian", "batman"];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
