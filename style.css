@@ -123,6 +123,10 @@ body {
   justify-content: center;
 }
 
+.fake-input {
+  opacity: 0;
+}
+
 .popup {
   position: absolute;
   top: 50%;
