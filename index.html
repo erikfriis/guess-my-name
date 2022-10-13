@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess my name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Hi, do you remember me?</h1>
+    <p>Do you remember this persons name? - Enter a letter</p>
+    </div>
+    <div class="game-container">
+<div class="figure-container">
+    <img src="/guess-my-name/img/face-1-2.png" alt="" class="remove-figure">
+    <img src="/guess-my-name/img/face 2-2.png" alt="" class="figure-part remove-figure">
+    <img src="/guess-my-name/img/face-3-2.png" alt="" class="figure-part remove-figure">
+    <img src="/guess-my-name/img/face-4-2.png" alt="" class="figure-part remove-figure">
+    <img src="/guess-my-name/img/face-5-2.png" alt="" class="figure-part remove-figure">
+    <img src="/guess-my-name/img/face-6-2.png" alt="" class="figure-part">
+</div>
+        <div class="wrong-letters-container">
+            <div id="wrongLetters"></div>
+        </div>
+        <div class="word" id="word"></div>
+    </div>
+
+    <!-- Container for final messages -->
+    <div class="popup-container" id="popupContainer">
+        <div class="popup">
+            <h2 id="finalMessage"></h2>
+            <button id="playButton">Play again</button>
+        </div>
+    </div>
+
+    <!-- Notfication -->
+    <div class="notification-container" id="notificationContainer">
+        <p>You have already entered this letter</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
