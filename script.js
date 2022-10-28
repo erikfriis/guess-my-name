@@ -34,6 +34,7 @@ function displayWord() {
     )
 
     .join("")}`;
+
   const innerWord = wordE1.innerText.replace(/\n/g, "");
 
   if (innerWord === selectedWord) {
@@ -105,8 +106,15 @@ window.addEventListener("keydown", (e) => {
 
 playAgainBtn.addEventListener("click", () => {
   //Empty arrays
+  console.log("correctLetters", correctLetters);
+  console.log("wrongLetters", wrongLetters);
   correctLetters.splice(0);
   wrongLetters.splice(0);
+
+  const myString = "hello";
+  const myString2 = "world";
+
+  console.log(`${myString} ${5 * 5} 5 * 5`);
 
   selectedWord = words[Math.floor(Math.random() * words.length)];
 
